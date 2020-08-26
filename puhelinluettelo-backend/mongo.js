@@ -26,7 +26,7 @@ if (process.argv.length === 5) {
         id: Math.floor(Math.random() * 1000000)
     })
 
-    person.save().then(response => {
+    person.save().then(()) => {
         console.log('note saved!')
         mongoose.connection.close()
     })
@@ -34,7 +34,7 @@ if (process.argv.length === 5) {
 
 else {
     Person.find({}).then(result => {
-        console.log("phonebook:")
+        console.log('phonebook:')
         result.forEach(person => {
             console.log(`${person.name} ${person.number}`)
         })
